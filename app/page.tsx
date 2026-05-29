@@ -104,7 +104,7 @@ export default function Home() {
               <div className="fact-row"><span className="k">age</span><span className="v">21</span></div>
               <div className="fact-row"><span className="k">based</span><span className="v">Newcastle-upon-Tyne</span></div>
               <div className="fact-row"><span className="k">role</span><span className="v">Full-stack &amp; native dev</span></div>
-              <div className="fact-row"><span className="k">company</span><span className="v">Pellar Technologies Ltd</span></div>
+              <div className="fact-row"><span className="k">company</span><span className="v"><a href="https://pellar.co.uk" target="_blank" rel="noopener noreferrer">Pellar Technologies Ltd</a></span></div>
               <div className="fact-row"><span className="k">status</span><span className="v accent">open to work →</span></div>
             </aside>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
             <a className="work-item reveal" href="https://tooti.uk" target="_blank" rel="noopener noreferrer">
               <span className="work-no">03</span>
               <span className="work-name">tooti</span>
-              <span className="work-desc">A music app. I contributed engineering and tooling to ship features on schedule.</span>
+              <span className="work-desc">A music platform. Took their vision and built it out — features, tooling, and the engineering pace to keep things moving.</span>
               <span className="work-meta">
                 <span className="work-tags">Collaboration</span>
                 <span className="work-status">contributor</span>
@@ -250,12 +250,13 @@ export default function Home() {
               <h3><a href="https://pellar.co.uk" target="_blank" rel="noopener noreferrer">Pellar Technologies Limited</a></h3>
               <p>
                 Pellar is the company behind the work. I ship my own products through it and take
-                on client builds — the same hands on both. Noodle, SQEz, the AI CRM, contributions
-                to tooti: all through Pellar.
+                on client builds — the same hands on both. Noodle, SQEz, Forma, the AI CRM,
+                contributions to tooti: all through Pellar.
               </p>
               <div className="vent-products">
                 <span className="chip">Noodle</span>
                 <span className="chip">SQEz</span>
+                <span className="chip">Forma</span>
                 <span className="chip">tooti</span>
                 <span className="chip">AI CRM</span>
                 <span className="chip">+ client work</span>
@@ -293,10 +294,6 @@ export default function Home() {
               <p>
                 The deadline keeps me moving. It&apos;s why I answer late messages, outwork
                 the brief, and take every project seriously. Trust comes from what ships.
-              </p>
-              <p>
-                Wanting something specific by a specific date isn&apos;t a liability.
-                That drive is what I bring to your project.
               </p>
             </div>
 
@@ -387,7 +384,7 @@ export default function Home() {
           <div className="now-wrap">
             <div className="now-side reveal">
               <p className="updated">last updated · <b>May 2026</b></p>
-              <p>Inspired by the /now movement. If we talk and this looks stale, call me out on it.</p>
+              <p>If we talk and this looks stale, call me out on it.</p>
             </div>
             <div className="now-feed reveal" style={{'--d': '.1s'} as React.CSSProperties}>
               <div className="now-item">
