@@ -202,8 +202,17 @@ export default function Home() {
                 <span className="work-status">contributor</span>
               </span>
             </a>
-            <a className="work-item reveal" href="#contact">
+            <a className="work-item reveal" href="https://useforma.co.uk" target="_blank" rel="noopener noreferrer">
               <span className="work-no">04</span>
+              <span className="work-name">Forma</span>
+              <span className="work-desc">Booking and studio management platform for yoga, pilates, and fitness studios.</span>
+              <span className="work-meta">
+                <span className="work-tags">Next.js · Postgres</span>
+                <span className="work-status live">● live</span>
+              </span>
+            </a>
+            <a className="work-item reveal" href="#contact">
+              <span className="work-no">05</span>
               <span className="work-name">AI CRM</span>
               <span className="work-desc">A CRM built alone, with AI running through the core workflows. Started with an empty repo.</span>
               <span className="work-meta">
@@ -212,7 +221,7 @@ export default function Home() {
               </span>
             </a>
             <a className="work-item reveal" href="#contact">
-              <span className="work-no">05</span>
+              <span className="work-no">06</span>
               <span className="work-name">…and more</span>
               <span className="work-desc">More projects without case studies. Ask what I can&apos;t show publicly yet.</span>
               <span className="work-meta">
@@ -238,7 +247,7 @@ export default function Home() {
           <div className="vent reveal">
             <div className="vent-text">
               <span className="vent-tag">// registered company · UK</span>
-              <h3>Pellar Technologies Limited</h3>
+              <h3><a href="https://pellar.co.uk" target="_blank" rel="noopener noreferrer">Pellar Technologies Limited</a></h3>
               <p>
                 Pellar is the company behind the work. I ship my own products through it and take
                 on client builds — the same hands on both. Noodle, SQEz, the AI CRM, contributions
