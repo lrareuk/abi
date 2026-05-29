@@ -384,8 +384,8 @@ export default function Home() {
               <div className="now-item">
                 <span className="t">now</span>
                 <span className="c">
-                  <span className="h">Growing SQEz</span>
-                  <span className="d">Adding content and polishing the revision flow for the next exam cohort.</span>
+                  <span className="h">Building tooti</span>
+                  <span className="d">Shipping features and keeping the engineering moving as the product grows.</span>
                 </span>
                 <span className="state">active</span>
               </div>
