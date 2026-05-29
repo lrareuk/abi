@@ -6,35 +6,17 @@ export default function ScriptEffects() {
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function typeWordmark() {
-      const el = document.querySelector('.type-target') as HTMLElement | null;
-      if (!el) return;
-      const text = el.getAttribute('data-text') || el.textContent || '';
-      if (reduce) { el.textContent = text; return; }
-      el.textContent = '';
-      let i = 0;
-      const speed = 62;
-      function step() {
-        if (i <= text.length) {
-          el!.textContent = text.slice(0, i);
-          i++;
-          setTimeout(step, speed + (Math.random() * 36 - 18));
-        }
-      }
-      setTimeout(step, 420);
-    }
-
     function heroReveal() {
       const items = document.querySelectorAll('[data-hero]');
       items.forEach((el, idx) => {
         const htmlEl = el as HTMLElement;
         htmlEl.style.opacity = '0';
-        htmlEl.style.transform = 'translateY(18px)';
-        htmlEl.style.transition = 'opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1)';
+        htmlEl.style.transform = 'translateY(16px)';
+        htmlEl.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)';
         setTimeout(() => {
           htmlEl.style.opacity = '1';
           htmlEl.style.transform = 'none';
-        }, 250 + idx * 110);
+        }, 200 + idx * 100);
       });
     }
 
@@ -51,7 +33,7 @@ export default function ScriptEffects() {
             io.unobserve(e.target);
           }
         });
-      }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
       els.forEach(e => io.observe(e));
     }
 
@@ -64,7 +46,11 @@ export default function ScriptEffects() {
         .filter(Boolean) as HTMLElement[];
 
       function onScroll() {
-        (nav as Element).classList.toggle('scrolled', window.scrollY > 24);
+        // Show nav only once the About section comes into view
+        const about = document.getElementById('about');
+        const showAt = about ? about.offsetTop - 80 : window.innerHeight;
+        (nav as Element).classList.toggle('visible', window.scrollY >= showAt);
+
         const probe = window.scrollY + window.innerHeight * 0.32;
         let current: HTMLElement | null = null;
         for (const s of sections) {
@@ -98,7 +84,7 @@ export default function ScriptEffects() {
       if (reduce || window.matchMedia('(pointer: coarse)').matches) return;
       document.querySelectorAll('[data-mag]').forEach(btn => {
         const btnEl = btn as HTMLElement;
-        const strength = 0.32;
+        const strength = 0.28;
         btnEl.addEventListener('mousemove', (e) => {
           const r = btnEl.getBoundingClientRect();
           const x = (e as MouseEvent).clientX - r.left - r.width / 2;
@@ -125,26 +111,12 @@ export default function ScriptEffects() {
       io.observe(fill);
     }
 
-    function glitch() {
-      if (reduce) return;
-      const glyphs = '!<>-_\\/[]{}—=+*^?#________';
-      document.querySelectorAll('[data-glitch]').forEach(el => {
-        const original = el.textContent || '';
-        let frame: ReturnType<typeof setInterval>;
-        el.addEventListener('mouseenter', () => {
-          let iteration = 0;
-          clearInterval(frame);
-          frame = setInterval(() => {
-            el.textContent = original.split('').map((ch, i) => {
-              if (ch === ' ') return ' ';
-              if (i < iteration) return original[i];
-              return glyphs[Math.floor(Math.random() * glyphs.length)];
-            }).join('');
-            iteration += 1 / 2;
-            if (iteration >= original.length) { clearInterval(frame); el.textContent = original; }
-          }, 28);
-        });
-        el.addEventListener('mouseleave', () => { clearInterval(frame); el.textContent = original; });
+    function themeToggle() {
+      const btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const light = document.documentElement.classList.toggle('light');
+        try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (_) {}
       });
     }
 
@@ -153,14 +125,13 @@ export default function ScriptEffects() {
       if (y) y.textContent = new Date().getFullYear().toString();
     }
 
-    typeWordmark();
     heroReveal();
     scrollReveals();
     navBehavior();
     mobileMenu();
     magnetic();
     timeline();
-    glitch();
+    themeToggle();
     year();
   }, []);
 
