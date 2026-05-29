@@ -175,7 +175,7 @@ export default function Home() {
           </div>
 
           <div className="work-list">
-            <a className="work-item reveal" href="#contact">
+            <a className="work-item reveal" href="https://noodleapp.xyz" target="_blank" rel="noopener noreferrer">
               <span className="work-no">01</span>
               <span className="work-name">Noodle</span>
               <span className="work-desc">Native iOS note-taking. Fast capture, clean structure. Built in Swift, shipped to the App Store.</span>
@@ -184,7 +184,7 @@ export default function Home() {
                 <span className="work-status live">● live</span>
               </span>
             </a>
-            <a className="work-item reveal" href="#contact">
+            <a className="work-item reveal" href="https://sqez.lrare.co.uk" target="_blank" rel="noopener noreferrer">
               <span className="work-no">02</span>
               <span className="work-name">SQEz</span>
               <span className="work-desc">Revision tool for law students sitting the SQE. Structured content built around how the exam actually works.</span>
@@ -193,7 +193,7 @@ export default function Home() {
                 <span className="work-status live">● live</span>
               </span>
             </a>
-            <a className="work-item reveal" href="#contact">
+            <a className="work-item reveal" href="https://tooti.uk" target="_blank" rel="noopener noreferrer">
               <span className="work-no">03</span>
               <span className="work-name">tooti</span>
               <span className="work-desc">A music app. I contributed engineering and tooling to ship features on schedule.</span>
