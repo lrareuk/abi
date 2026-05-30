@@ -85,8 +85,8 @@ export default function Home() {
               </p>
               <p>
                 Most days I&apos;m in <strong>Next.js</strong> or <strong>Swift</strong>,
-                with <strong>PostgreSQL</strong> underneath. Give me a problem and I&apos;ll
-                make it real. That&apos;s the part I&apos;m actually in it for.
+                with <strong>PostgreSQL</strong> underneath. I pick up the problem first,
+                then write the code.
               </p>
               <p>
                 I&apos;ve shipped note-taking apps, revision tools for trainee solicitors,
@@ -144,7 +144,7 @@ export default function Home() {
             <article className="svc reveal">
               <span className="svc-no">04</span>
               <h3>AI tooling</h3>
-              <p>AI that does something useful. I built a full CRM with AI at the core — that&apos;s the bar I apply to client work.</p>
+              <p>AI that does something useful. I built a full CRM with AI at the core. That&apos;s the bar I apply to client work.</p>
               <span className="svc-tags">LLMs · Automation · CRM</span>
             </article>
             <article className="svc reveal" style={{'--d': '.06s'} as React.CSSProperties}>
@@ -156,7 +156,7 @@ export default function Home() {
             <article className="svc reveal" style={{'--d': '.12s'} as React.CSSProperties}>
               <span className="svc-no">06</span>
               <h3>Freelance &amp; contract</h3>
-              <p>Day rate, full project, or ongoing. Honest timelines, clear updates. My name goes on it — so the work has to be good.</p>
+              <p>Day rate, full project, or ongoing. Honest timelines, clear updates. My name goes on it, so the work has to be good.</p>
               <span className="svc-tags">Day rate · Project · Retainer</span>
             </article>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
             <a className="work-item reveal" href="https://tooti.uk" target="_blank" rel="noopener noreferrer">
               <span className="work-no">03</span>
               <span className="work-name">tooti</span>
-              <span className="work-desc">A music platform. Took their vision and built it out — features, tooling, and the engineering pace to keep things moving.</span>
+              <span className="work-desc">A music platform. Took their vision and built it out: features, tooling, and the engineering pace to keep things moving.</span>
               <span className="work-meta">
                 <span className="work-tags">Collaboration</span>
                 <span className="work-status">contributor</span>
@@ -241,7 +241,7 @@ export default function Home() {
               <span className="kick">04 / ventures</span>
               <h2>The name on the invoices.</h2>
             </div>
-            <p className="h-right">Freelance builds and own products, under one roof.</p>
+            <p className="h-right">Client builds and original products, under one roof.</p>
           </div>
 
           <div className="vent reveal">
@@ -250,7 +250,7 @@ export default function Home() {
               <h3><a href="https://pellar.co.uk" target="_blank" rel="noopener noreferrer">Pellar Technologies Limited</a></h3>
               <p>
                 Pellar is the company behind the work. I ship my own products through it and take
-                on client builds — the same hands on both. Noodle, SQEz, Forma, the AI CRM,
+                on client builds. The same hands on both. Noodle, SQEz, Forma, the AI CRM,
                 contributions to tooti: all through Pellar.
               </p>
               <div className="vent-products">
@@ -415,7 +415,7 @@ export default function Home() {
                 <span className="t">open</span>
                 <span className="c">
                   <span className="h">Open for freelance</span>
-                  <span className="d">Room for one or two projects. Web or iOS — bring the interesting ones.</span>
+                  <span className="d">Room for one or two projects. Web or iOS. Bring the interesting ones.</span>
                 </span>
                 <span className="state">available</span>
               </div>
